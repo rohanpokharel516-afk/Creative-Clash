@@ -16,6 +16,7 @@
     <a href="index.html">Home</a>
     <a href="rights.html">Digital Rights</a>
     <a href="safety.html">Online Safety</a>
+    <a href="Cyber-Threats.html">Cyber Threats</a>
 </nav>
 
 <section class="content">
@@ -30,6 +31,20 @@
         </ul>
     </div>
 
+    <div class="card">
+        <h3>✅ Digital Rights Checklist</h3>
+        <form id="rights-checklist">
+            <label><input type="checkbox" value="1"> I keep my personal information private online</label><br>
+            <label><input type="checkbox" value="1"> I report cybercrimes or suspicious activity</label><br>
+            <label><input type="checkbox" value="1"> I read terms before sharing data with services</label><br>
+            <label><input type="checkbox" value="1"> I use secure, trusted digital platforms</label><br>
+            <label><input type="checkbox" value="1"> I understand my rights under Nepal’s cyber laws</label><br>
+            <label><input type="checkbox" value="1"> I regularly review my privacy settings</label><br>
+            <button type="button" onclick="calculateRights()">Check compliance</button>
+        </form>
+        <p id="rights-score"></p>
+    </div>
+
     <h3>⚖️ Why Digital Rights Matter</h3>
     <p>
         Understanding digital rights helps Nepali citizens stay safe,
@@ -41,5 +56,6 @@
     <p>Knowledge is your first line of defense</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

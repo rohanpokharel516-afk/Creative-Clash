@@ -6,8 +6,13 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #0b1120;
-    color: #e5e7eb;
+    /* place your background image at ./images/bg.jpg or change the URL below */
+    background-image: url('images/bg.jpg');
+    background-color: #f5f5f5; /* fallback */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
 }
 
 
@@ -82,43 +87,43 @@ video::-webkit-media-controls {
 }
 
 header {
-    background-color: #020617;
+    background-color: rgba(255,255,255,0.85);
     padding: 25px;
     text-align: center;
-    border-bottom: 2px solid #22d3ee;
+    border-bottom: 2px solid rgba(30,144,255,0.6);
 }
 
 header h1 {
-    color: #22d3ee;
+    color: #1e90ff;
 }
 
 header p {
-    color: #94a3b8;
+    color: #555;
 }
 
 nav {
-    background-color: #020617;
+    background-color: rgba(255,255,255,0.85);
     padding: 12px;
     text-align: center;
 }
 
 nav a {
-    color: #e5e7eb;
+    color: #333;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #22d3ee;
+    color: #1e90ff;
 }
 
 .content {
-    background-color: #020617;
+    background-color: rgba(255,255,255,0.92);
     margin: 25px;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.15);
 }
 
 .content h2,
@@ -127,16 +132,17 @@ nav a:hover {
 }
 
 .card {
-    border: 1px solid #1e293b;
+    border: 1px solid rgba(0,0,0,0.08);
     padding: 15px;
     margin-top: 15px;
     border-radius: 6px;
+    background-color: rgba(255,255,255,0.95);
 }
 
 button {
     background: transparent;
-    color: #22d3ee;
-    border: 2px solid #22d3ee;
+    color: #1e90ff;
+    border: 2px solid #1e90ff;
     padding: 10px 25px;
     margin-top: 15px;
     cursor: pointer;
@@ -144,13 +150,80 @@ button {
 }
 
 button:hover {
-    background: #22d3ee;
-    color: #020617;
+    background: #1e90ff;
+    color: #fff;
+}
+
+.button-link {
+    display: inline-block;
+    background: transparent;
+    color: #1e90ff;
+    border: 2px solid #1e90ff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button-link:hover {
+    background: #1e90ff;
+    color: #fff;
 }
 
 footer {
     text-align: center;
     padding: 12px;
-    background-color: #020617;
-    border-top: 1px solid #1e293b;
+    background-color: rgba(255,255,255,0.85);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    color: #333;
+}
+
+/* Threat page specific */
+.threat-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.threat-box {
+    flex: 1 1 150px;
+    background-color: rgba(255,255,255,0.85);
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.threat-box:hover {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.threat-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.threat-box a:hover {
+    color: inherit;
+}
+
+#threat-details button {
+    float: right;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#threat-details button:hover {
+    color: #1e90ff;
 }
