@@ -1,3 +1,14 @@
+:root{
+    --bg: #f5f5f5;
+    --card-bg: rgba(255,255,255,0.96);
+    --muted: #555;
+    --text: #222;
+    --accent: #1e90ff;
+    --accent-strong: #1565c0;
+    --glass: rgba(255,255,255,0.85);
+    --shadow: 0 6px 20px rgba(16,24,40,0.08);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +17,24 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    /* place your background image at ./images/bg.jpg or change the URL below */
-    background-image: url('images/bg.jpg');
-    background-color: #f5f5f5; /* fallback */
+    font-size: 16px;
+    line-height: 1.55;
+    /* background image provided by user */
+    background-image: url('https://i.pinimg.com/1200x/91/83/42/918342ad6e472bcff4d32caa9c1c52fb.jpg');
+    background-color: var(--bg); /* fallback */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #333;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* page wrapper to center content */
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 
@@ -44,14 +66,14 @@ body {
 }
 
 .video-overlay h1 {
-    color: #22d3ee;
-    font-size: 48px;
-    letter-spacing: 2px;
+    color: var(--accent);
+    font-size: 44px;
+    letter-spacing: 1px;
 }
 
 .video-overlay p {
-    color: #e5e7eb;
-    font-size: 18px;
+    color: #f0f6fb;
+    font-size: 16px;
 }
 
 /* Skip button */
@@ -87,10 +109,10 @@ video::-webkit-media-controls {
 }
 
 header {
-    background-color: rgba(255,255,255,0.85);
-    padding: 25px;
+    background-color: var(--glass);
+    padding: 28px 20px;
     text-align: center;
-    border-bottom: 2px solid rgba(30,144,255,0.6);
+    border-bottom: 2px solid rgba(30,144,255,0.12);
 }
 
 header h1 {
@@ -102,51 +124,66 @@ header p {
 }
 
 nav {
-    background-color: rgba(255,255,255,0.85);
-    padding: 12px;
+    background-color: transparent;
+    padding: 8px 20px;
     text-align: center;
 }
 
 nav a {
     color: #333;
-    margin: 0 15px;
+    margin: 0 10px;
+    padding: 6px 12px;
     text-decoration: none;
     font-weight: bold;
+    background: rgba(255,255,255,0.8);
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
 }
 
 nav a:hover {
-    color: #1e90ff;
+    background: var(--accent);
+    color: #fff;
 }
 
 .content {
-    background-color: rgba(255,255,255,0.92);
-    margin: 25px;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(30, 144, 255, 0.15);
+    background-color: rgba(255,255,255,0.95);
+    margin: 25px auto;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
 .content h2,
 .content h3 {
-    color: #22d3ee;
+    color: var(--accent-strong);
+    margin-bottom: 12px;
 }
 
+.content p { color: var(--muted); margin-bottom: 12px; }
+
+.content .lead { font-size: 1.05rem; color: #444; }
+
 .card {
-    border: 1px solid rgba(0,0,0,0.08);
-    padding: 15px;
-    margin-top: 15px;
-    border-radius: 6px;
-    background-color: rgba(255,255,255,0.95);
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 18px;
+    margin-top: 18px;
+    border-radius: 10px;
+    background-color: var(--card-bg);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
+
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(16,24,40,0.08);} 
 
 button {
     background: transparent;
-    color: #1e90ff;
-    border: 2px solid #1e90ff;
-    padding: 10px 25px;
-    margin-top: 15px;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 10px 22px;
+    margin-top: 14px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
 button:hover {
@@ -157,11 +194,11 @@ button:hover {
 .button-link {
     display: inline-block;
     background: transparent;
-    color: #1e90ff;
-    border: 2px solid #1e90ff;
-    padding: 10px 20px;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 10px 18px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-top: 10px;
 }
 
@@ -171,12 +208,16 @@ button:hover {
 }
 
 footer {
+footer {
     text-align: center;
-    padding: 12px;
+    padding: 18px 12px;
     background-color: rgba(255,255,255,0.85);
-    border-top: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid rgba(0,0,0,0.04);
     color: #333;
 }
+
+/* small utility */
+.muted { color: var(--muted); }
 
 /* Threat page specific */
 .threat-container {
@@ -226,4 +267,34 @@ footer {
 
 #threat-details button:hover {
     color: #1e90ff;
+}
+
+/* Form and input styles */
+label { display: block; margin: 8px 0; color: #333; }
+input[type="checkbox"] { margin-right: 8px; transform: translateY(2px); }
+
+/* Buttons as reusable class */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+    cursor: pointer;
+}
+.btn:hover { background: var(--accent); color: #fff; }
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .threat-container { gap: 10px; }
+    .threat-box { flex: 1 1 45%; padding: 12px; }
+    .content { margin: 18px; padding: 18px; }
+    header h1 { font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+    .threat-box { flex: 1 1 100%; }
+    nav a { display: inline-block; margin: 8px; }
+    .page { padding: 12px; }
 }
