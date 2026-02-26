@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Aware Nepal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="videoIntro">
+
+    <video id="introVideo" autoplay muted class="bg-video">
+        <source src="hacking.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="video-overlay">
+        <h1>Secure Minds.Safer Digital Nepal. </h1>
+        <p>Cybersecurity • Digital Rights • Online Safety</p>
+    </div>
+
+    <button id="skipBtn" onclick="skipIntro()">Skip Intro</button>
+
+</div>
+
+<div id="mainSite" class="hidden">
+
+<header>
+    <h1>Secure Minds.Safer Digital Nepal.</h1>
+    <p>Protecting Nepal’s Digital Future</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="rights.html">Digital Rights</a>
+    <a href="safety.html">Online Safety</a>
+</nav>
+
+<section class="content">
+    <h2>Cybersecurity is the practice of protecting computers, networks, servers, and data from digital attacks
+         like hacking, malware, or phishing. It uses tools, policies, and training to ensure information stays confidential, intact, 
+         and accessible only to authorized users. Its main uses include preventing data theft, avoiding financial losses from ransomware, 
+         and maintaining business operations against disruptions. </h2>
+    <h2>🌐 Cybersecurity Awareness</h2>
+    <p>
+        With the rapid growth of internet, mobile banking, and social media in Nepal,
+        cyber threats such as scams, hacking, and digital fraud are increasing.
+    </p>
+
+    <div class="card">
+        <h3>⚠️ Common Cyber Threats in Nepal</h3>
+        <ul>
+            <li>Fake Facebook & Instagram messages</li>
+            <li>eSewa & mobile banking scams</li>
+            <li>Phishing SMS and emails</li>
+            <li>Weak or reused passwords</li>
+        </ul>
+    </div>
+
+    <button onclick="showTip()">Get Cyber Tip</button>
+    <p id="tip"></p>
+</section>
+
+<footer>
+    <p>© 2026 Cyber Aware Nepal</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

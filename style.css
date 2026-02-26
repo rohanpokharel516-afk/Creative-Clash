@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #0b1120;
+    color: #e5e7eb;
+}
+
+
+
+#videoIntro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: black;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay text */
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video-overlay h1 {
+    color: #22d3ee;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+.video-overlay p {
+    color: #e5e7eb;
+    font-size: 18px;
+}
+
+/* Skip button */
+#skipBtn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    color: #22d3ee;
+    border: 1px solid #22d3ee;
+    padding: 6px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+#skipBtn:hover {
+    background: #22d3ee;
+    color: #020617;
+    opacity: 1;
+}
+
+/* Hide controls */
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+header {
+    background-color: #020617;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 2px solid #22d3ee;
+}
+
+header h1 {
+    color: #22d3ee;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+nav {
+    background-color: #020617;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: #e5e7eb;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #22d3ee;
+}
+
+.content {
+    background-color: #020617;
+    margin: 25px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+}
+
+.content h2,
+.content h3 {
+    color: #22d3ee;
+}
+
+.card {
+    border: 1px solid #1e293b;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+
+button {
+    background: transparent;
+    color: #22d3ee;
+    border: 2px solid #22d3ee;
+    padding: 10px 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #22d3ee;
+    color: #020617;
+}
+
+footer {
+    text-align: center;
+    padding: 12px;
+    background-color: #020617;
+    border-top: 1px solid #1e293b;
+}
